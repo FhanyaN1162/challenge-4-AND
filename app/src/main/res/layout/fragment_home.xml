@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/txtGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Hai binarian! "
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtGreeting2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:text="Mau makan apa hari ini?"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtGreeting" />
+
+        <ImageView
+            android:id="@+id/imgBanner"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner1"
+            app:layout_constraintTop_toBottomOf="@+id/txtGreeting2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgDiscount"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingStart="20dp"
+            android:src="@drawable/discount"
+            app:layout_constraintStart_toStartOf="@+id/imgBanner"
+            app:layout_constraintTop_toTopOf="@+id/imgBanner"
+            app:layout_constraintBottom_toBottomOf="@id/imgBanner"/>
+
+        <TextView
+            android:id="@+id/txtDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:text="Diskon 50%!"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imgDiscount"
+            app:layout_constraintTop_toTopOf="@+id/imgBanner"
+            app:layout_constraintBottom_toTopOf="@id/txtDiscountDescription"/>
+
+        <TextView
+            android:id="@+id/txtDiscountDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/white"
+            android:text="Pesan makanan dengan aplikasi dan dapatkan diskonmu"
+            app:layout_constraintTop_toBottomOf="@+id/txtDiscount"
+            app:layout_constraintStart_toEndOf="@+id/imgDiscount"
+            app:layout_constraintEnd_toEndOf="@+id/imgBanner"
+            app:layout_constraintBottom_toBottomOf="@id/imgBanner" />
+
+
+
+        <GridLayout
+            android:id="@+id/llCategories"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:columnCount="4"
+            android:rowCount="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBanner">
+
+            <!-- Gambar 1 -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="91dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_row="0"
+                android:layout_column="0">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/maindish" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="Main Dish" />
+            </LinearLayout>
+
+            <!-- Gambar 2 -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="91dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_row="0"
+                android:layout_column="1">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/appetizer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="Appetizer" />
+            </LinearLayout>
+
+            <!-- Gambar 3 -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="91dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_row="0"
+                android:layout_column="2">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dessert" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="Dessert" />
+            </LinearLayout>
+
+            <!-- Gambar 4 -->
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="91dp"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_row="0"
+                android:layout_column="3">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/drinks" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:text="Drinks" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/txtListMakanan"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:paddingStart="16dp"
+
+            android:text="List Menu Makanan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCategories"/>
+
+        <!-- Tombol Ganti Tampilan (Grid) -->
+        <ImageView
+            android:id="@+id/changeLayout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCategories"
+            android:contentDescription="Change Layout Button"/>
+
+        <!-- RecyclerView untuk Daftar Menu Makanan -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMenuGrid"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/changeLayout"
+            app:spanCount="2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

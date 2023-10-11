@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">challenge4</string>
+    <string name="name_arg">name</string>
+    <string name="price_arg">price</string>
+    <string name="description_arg">description</string>
+    <string name="image_res_arg">imageRes</string>
+    <string name="restaurant_address_arg">restaurantAddress</string>
+    <string name="google_maps_url_arg">googleMapsUrl</string>
+</resources>
